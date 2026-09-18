@@ -11,7 +11,7 @@ body {
 
     background:
         radial-gradient(
-            circle at top left,
+            circle at 15% 10%,
             #feda75 0%,
             #fa7e1e 25%,
             #d62976 50%,
@@ -19,8 +19,7 @@ body {
             #4f5bd5 100%
         );
 
-    display: flex;
-    justify-content: center;
+    background-attachment: fixed;
 
     color: #222;
 }
@@ -31,24 +30,28 @@ body {
 
     min-height: 100vh;
 
+    margin: 0 auto;
+
     padding: 50px 20px 30px;
 
     display: flex;
     flex-direction: column;
 }
 
+/* Perfil */
+
 .profile {
     text-align: center;
     color: white;
 
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .avatar {
-    width: 90px;
-    height: 90px;
+    width: 92px;
+    height: 92px;
 
-    margin: 0 auto 18px;
+    margin: 0 auto 16px;
 
     border-radius: 50%;
 
@@ -63,23 +66,41 @@ body {
     font-size: 28px;
     font-weight: bold;
 
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    border: 4px solid rgba(255, 255, 255, 0.5);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .profile h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
+    font-size: 25px;
+    line-height: 1.2;
+
+    margin-bottom: 5px;
 }
 
-.profile p {
+.username {
+    font-size: 14px;
+
+    opacity: 0.85;
+
+    margin-bottom: 10px;
+}
+
+.bio {
     font-size: 15px;
+    line-height: 1.5;
+
     opacity: 0.95;
 }
+
+/* Links */
 
 .links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+
+    gap: 14px;
 }
 
 .link {
@@ -88,38 +109,56 @@ body {
     display: flex;
     align-items: center;
 
-    min-height: 60px;
+    min-height: 62px;
 
-    padding: 12px 20px;
+    padding: 12px 18px;
 
-    border-radius: 14px;
+    border-radius: 16px;
 
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
 
     color: #222;
+
     text-decoration: none;
 
     font-weight: 600;
 
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.12);
 
     transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        background 0.2s ease;
 }
 
 .link:hover {
     transform: translateY(-2px);
 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    background: white;
+
+    box-shadow:
+        0 10px 24px rgba(0, 0, 0, 0.18);
+}
+
+.link:active {
+    transform: translateY(0);
+}
+
+.link:focus-visible {
+    outline: 3px solid rgba(255, 255, 255, 0.9);
+    outline-offset: 3px;
 }
 
 .link-icon {
-    width: 35px;
+    width: 38px;
+    min-width: 38px;
 
-    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    text-align: center;
+    font-size: 21px;
 }
 
 .link-title {
@@ -127,33 +166,57 @@ body {
 
     text-align: center;
 
-    padding-right: 35px;
+    padding-right: 38px;
 }
+
+/* Footer */
 
 footer {
     margin-top: auto;
+
     padding-top: 35px;
 
     text-align: center;
 
     color: white;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    opacity: 0.85;
+    opacity: 0.8;
 }
 
+/* Mobile */
+
 @media (max-width: 480px) {
+
     .container {
-        padding-top: 35px;
+        padding: 35px 16px 25px;
+    }
+
+    .profile {
+        margin-bottom: 25px;
+    }
+
+    .avatar {
+        width: 86px;
+        height: 86px;
+
+        font-size: 26px;
     }
 
     .profile h1 {
-        font-size: 22px;
+        font-size: 23px;
+    }
+
+    .bio {
+        font-size: 14px;
     }
 
     .link {
-        min-height: 56px;
+        min-height: 58px;
+
+        padding: 10px 14px;
+
+        border-radius: 14px;
     }
 }
-

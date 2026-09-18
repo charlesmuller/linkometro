@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta
+        name="description"
+        content="Todos os meus links em um só lugar."
+    >
+
     <title>Linkômetro</title>
 
     <link rel="stylesheet" href="style.css">
@@ -14,18 +19,24 @@
     <main class="container">
 
         <header class="profile">
-            <div class="avatar">
+            <div class="avatar" aria-label="Avatar do perfil">
                 LM
             </div>
 
-            <h1>@linkometro</h1>
+            <h1>Linkômetro</h1>
 
-            <p>
+            <p class="username">@linkometro</p>
+
+            <p class="bio">
                 Todos os meus links em um só lugar.
             </p>
         </header>
 
-        <section id="links" class="links"></section>
+        <section
+            id="links"
+            class="links"
+            aria-label="Links do perfil"
+        ></section>
 
         <footer>
             <span>Linkômetro</span>
@@ -36,4 +47,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-

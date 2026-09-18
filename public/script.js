@@ -1,4 +1,9 @@
-javascript
+const profile = {
+    name: "Linkômetro",
+    username: "@linkometro",
+    bio: "Todos os meus links em um só lugar."
+};
+
 const links = [
     {
         title: "Instagram",
@@ -40,4 +45,3 @@ links.forEach((link) => {
 
     linksContainer.appendChild(element);
 });
-
