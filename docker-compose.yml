@@ -1,0 +1,7 @@
+services:
+  landing:
+    build: .
+    container_name: link-poc
+    restart: unless-stopped
+    ports:
+      - "8080:80"

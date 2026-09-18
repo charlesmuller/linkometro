@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            #feda75 0%,
+            #fa7e1e 25%,
+            #d62976 50%,
+            #962fbf 75%,
+            #4f5bd5 100%
+        );
+
+    display: flex;
+    justify-content: center;
+
+    color: #222;
+}
+
+.container {
+    width: 100%;
+    max-width: 680px;
+
+    min-height: 100vh;
+
+    padding: 50px 20px 30px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.profile {
+    text-align: center;
+    color: white;
+
+    margin-bottom: 35px;
+}
+
+.avatar {
+    width: 90px;
+    height: 90px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    color: #d62976;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.profile h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.profile p {
+    font-size: 15px;
+    opacity: 0.95;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.link {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 60px;
+
+    padding: 12px 20px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    color: #222;
+    text-decoration: none;
+
+    font-weight: 600;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.link:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+.link-icon {
+    width: 35px;
+
+    font-size: 22px;
+
+    text-align: center;
+}
+
+.link-title {
+    flex: 1;
+
+    text-align: center;
+
+    padding-right: 35px;
+}
+
+footer {
+    margin-top: auto;
+    padding-top: 35px;
+
+    text-align: center;
+
+    color: white;
+
+    font-size: 13px;
+
+    opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding-top: 35px;
+    }
+
+    .profile h1 {
+        font-size: 22px;
+    }
+
+    .link {
+        min-height: 56px;
+    }
+}
+
